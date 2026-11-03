@@ -4,151 +4,168 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Don't Be a Freier: tax back for olim who work abroad</title>
-<meta name="description" content="If you made aliyah in the last ten years, salary for days you worked abroad may be exempt from Israeli income tax. Join the waitlist.">
+<meta name="description" content="If you made aliyah in the last ten years, salary for the days you worked abroad may be exempt from Israeli income tax. Join the waitlist.">
+<meta property="og:title" content="Don't Be a Freier">
+<meta property="og:description" content="You worked abroad. Israel may owe you money.">
+<meta property="og:url" content="https://dontbeafreier.com/">
+<meta name="theme-color" content="#cfe8f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%231a2bd8'/%3E%3Cpath transform='rotate(45 100 100)' fill='%23ff5a36' d='M100 4C108 4 112 20 112 40V72L190 118C194 120 196 124 196 128V136L112 112 110 160 134 178V188L100 180 66 188V178L90 160 88 112 4 136V128C4 124 6 120 10 118L88 72V40C88 20 92 4 100 4Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Courier+Prime&family=Frank+Ruhl+Libre:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Courier+Prime&family=League+Gothic&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #dfeae2;
-    --sheet: #f3f8f4;
-    --ink: #17305a;
-    --line: #8fa8a0;
-    --stamp: #7a1f6b;
+    --sky: #cfe8f7;
+    --cobalt: #1a2bd8;
+    --coral: #ff5a36;
+    --ink: #0d1570;
+    --gutter: clamp(1.25rem, 4vw, 4rem);
   }
   * { box-sizing: border-box; }
+  html { background: var(--sky); }
   body {
     margin: 0;
-    background: var(--paper);
     color: var(--ink);
-    font: 400 1.125rem/1.55 Assistant, system-ui, sans-serif;
+    font: 400 1.2rem/1.5 Assistant, system-ui, sans-serif;
+    overflow-x: hidden;
   }
-  a { color: inherit; }
-  a:focus-visible { outline: 3px solid var(--stamp); outline-offset: 3px; }
-  .sheet {
-    max-width: 52rem;
-    margin: clamp(0px, 4vw, 3rem) auto;
-    padding: clamp(1.5rem, 6vw, 4rem);
-    background: var(--sheet);
-    border: 1px solid var(--line);
+  a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+
+  .hero {
+    position: relative;
     overflow: hidden;
+    padding: 1.25rem var(--gutter) clamp(2.5rem, 6vw, 5rem);
   }
   .definition {
-    margin: 0 0 clamp(2rem, 6vw, 3.5rem);
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--line);
-    font: 400 1rem/1.5 "Courier Prime", monospace;
+    position: relative;
+    margin: 0 0 clamp(0.5rem, 2vw, 1.5rem);
+    font: 400 clamp(0.85rem, 1.4vw, 1.05rem)/1.4 "Courier Prime", monospace;
   }
-  .hero { position: relative; }
   h1 {
-    margin: 0;
-    max-width: 13ch;
-    font: 900 clamp(2.75rem, 10vw, 5.5rem)/1 "Frank Ruhl Libre", Georgia, serif;
-    letter-spacing: -0.015em;
-  }
-  .lede { max-width: 36rem; margin: 1.75rem 0 0; font-size: 1.3rem; line-height: 1.45; }
-  .stamp {
-    position: absolute;
-    top: -0.5rem;
-    right: 0;
-    padding: 0.5rem 0.9rem 0.3rem;
-    border: 4px solid var(--stamp);
-    border-radius: 6px;
-    color: var(--stamp);
-    font: 700 clamp(1rem, 2.6vw, 1.5rem)/1 "Courier Prime", monospace;
+    position: relative;
+    margin: 0 0 0 -0.02em;
+    color: var(--cobalt);
+    font: 400 min(33.5vw, 44svh)/0.86 "League Gothic", Impact, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: -0.005em;
     white-space: nowrap;
-    transform: rotate(-9deg);
+  }
+  h1 span { display: block; }
+  .masthead { position: relative; }
+  .sky {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
     mix-blend-mode: multiply;
-    animation: stamp 420ms cubic-bezier(.3, 1.5, .5, 1) 500ms both;
+    pointer-events: none;
   }
-  .stamp s { text-decoration-thickness: 3px; }
-  @keyframes stamp {
-    from { opacity: 0; transform: rotate(-9deg) scale(2.2); }
-    to { opacity: 0.9; transform: rotate(-9deg) scale(1); }
+  .plane { fill: var(--coral); }
+  .route { fill: none; stroke: var(--cobalt); stroke-width: 3; stroke-dasharray: 3 11; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .lede {
+    position: relative;
+    max-width: 44rem;
+    margin: clamp(1.5rem, 4vw, 3rem) 0 0;
   }
+  .lede strong {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--cobalt);
+    font: 400 clamp(2.4rem, 5.4vw, 4.75rem)/0.98 "League Gothic", Impact, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .band { padding: clamp(3rem, 7vw, 6rem) var(--gutter); }
   h2 {
-    margin: clamp(2.5rem, 7vw, 4rem) 0 0.75rem;
-    font: 700 1.6rem/1.2 "Frank Ruhl Libre", Georgia, serif;
+    margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+    font: 400 clamp(3rem, 8vw, 7rem)/0.92 "League Gothic", Impact, sans-serif;
+    text-transform: uppercase;
   }
-  .fields { margin: 0; border-top: 1px solid var(--line); }
-  .field {
-    display: grid;
-    grid-template-columns: 7rem 1fr;
-    gap: 1rem;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid var(--line);
+  .checks { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 4vw, 4rem); margin: 0; }
+  .checks dt { color: var(--cobalt); font: 400 clamp(2rem, 3.6vw, 3.25rem)/1 "League Gothic", Impact, sans-serif; text-transform: uppercase; }
+  .checks dd { margin: 0.5rem 0 0; }
+  .note { margin: clamp(1.5rem, 3vw, 2.5rem) 0 0; font: 400 1.05rem/1.4 "Courier Prime", monospace; }
+
+  .route-steps { background: var(--coral); }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 4vw, 4rem); margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  .steps li { counter-increment: step; font-weight: 600; }
+  .steps li::before {
+    content: counter(step);
+    display: block;
+    font: 400 clamp(5rem, 13vw, 12rem)/0.85 "League Gothic", Impact, sans-serif;
   }
-  .field dt { font: 400 0.95rem/1.8 "Courier Prime", monospace; }
-  .field dd { margin: 0; }
-  .note { margin: 1rem 0 0; }
-  ol { margin: 0; padding-left: 1.4rem; }
-  ol li { margin-bottom: 0.5rem; padding-left: 0.3rem; }
+
+  .close { position: relative; overflow: hidden; background: var(--cobalt); color: #fff; padding-bottom: clamp(2rem, 4vw, 3rem); }
+  .close h2 { font-size: min(calc((100vw - 2 * var(--gutter) - 1rem) / 5.6), 24rem); margin-bottom: 0.15em; margin-left: -0.02em; white-space: nowrap; }
+  .close p { max-width: 38rem; margin: 0; }
   .cta {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 1.3rem;
-    background: var(--ink);
-    color: var(--sheet);
-    font-weight: 600;
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.5rem;
+    background: var(--coral);
+    color: var(--ink);
+    font-weight: 700;
     text-decoration: none;
+    transition: background 120ms ease;
   }
-  .cta:hover { background: var(--stamp); }
-  footer {
-    margin-top: clamp(2.5rem, 7vw, 4rem);
-    padding-top: 1rem;
-    border-top: 1px solid var(--line);
-    font-size: 0.95rem;
+  .cta:hover { background: #fff; }
+  .cta:focus-visible { outline-color: #fff; }
+  .legal { margin-top: clamp(2.5rem, 6vw, 5rem) !important; max-width: none !important; font-size: 0.95rem; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .plane-group { animation: fly 1100ms cubic-bezier(.16, .84, .3, 1) both; }
+    @keyframes fly { from { transform: translate(-260px, 130px); opacity: 0; } to { transform: none; opacity: 1; } }
   }
-  footer p { margin: 0; }
-  @media (max-width: 34rem) {
-    .stamp { position: static; display: inline-block; margin-bottom: 1.5rem; }
-    .field { grid-template-columns: 1fr; gap: 0; }
+  @media (min-width: 75rem) {
+    .sky { transform: scale(1.4); transform-origin: 100% 50%; }
   }
-  @media (prefers-reduced-motion: reduce) {
-    .stamp { animation: none; opacity: 0.9; }
+  @media (max-width: 46rem) {
+    .checks, .steps { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
-<main class="sheet">
-  <p class="definition"><strong>freier</strong> (n., Israeli slang): someone who pays when they didn't have to.</p>
-
+<main>
   <section class="hero">
-    <p class="stamp" aria-hidden="true">Not a <s>freier</s></p>
-    <h1>You worked abroad. Israel may owe you money.</h1>
-    <p class="lede">If you made aliyah in the last ten years, salary for the days you worked abroad may be exempt from Israeli income tax. You can miss it entirely, or pay someone a share of the refund to claim it. We think there should be a third option.</p>
+    <div class="masthead">
+      <p class="definition"><strong>freier</strong> (n., Israeli slang): someone who pays when they didn't have to.</p>
+      <h1><span>Don't be</span><span>a freier.</span></h1>
+      <svg class="sky" viewBox="0 0 1600 900" preserveAspectRatio="xMaxYMid meet" aria-hidden="true" focusable="false">
+        <path class="route" d="M-2400 900 C -300 900, 500 800, 790 560"/>
+        <g class="plane-group">
+          <path class="plane" transform="translate(1185 345) rotate(62) scale(5.6) translate(-100 -100)" d="M100 4C108 4 112 20 112 40V72L190 118C194 120 196 124 196 128V136L112 112 110 160 134 178V188L100 180 66 188V178L90 160 88 112 4 136V128C4 124 6 120 10 118L88 72V40C88 20 92 4 100 4Z"/>
+        </g>
+      </svg>
+    </div>
+    <p class="lede"><strong>You worked abroad. Israel may owe you money.</strong>If you made aliyah in the last ten years, salary for the days you worked abroad may be exempt from Israeli income tax. You can miss it entirely, or pay someone a share of the refund to claim it. We think there should be a third option.</p>
   </section>
 
-  <section>
+  <section class="band">
     <h2>Does this sound like you?</h2>
-    <dl class="fields">
-      <div class="field"><dt>Aliyah</dt><dd>You made aliyah as a new immigrant within the last ten years or so.</dd></div>
-      <div class="field"><dt>Salary</dt><dd>You're paid a salary in Israel and get a Form 106 each year.</dd></div>
-      <div class="field"><dt>Trips</dt><dd>You've travelled abroad for work and still paid full Israeli tax on those days.</dd></div>
+    <dl class="checks">
+      <div><dt>Aliyah</dt><dd>You made aliyah as a new immigrant within the last ten years or so.</dd></div>
+      <div><dt>Salary</dt><dd>You're paid a salary in Israel and get a Form 106 each year.</dd></div>
+      <div><dt>Trips</dt><dd>You've travelled abroad for work and still paid full Israeli tax on those days.</dd></div>
     </dl>
     <p class="note">That doesn't prove you qualify. It means it's worth checking.</p>
   </section>
 
-  <section>
+  <section class="band route-steps">
     <h2>How the claim works, roughly</h2>
-    <ol>
+    <ol class="steps">
       <li>Count the days you worked abroad.</li>
       <li>Work out what share of your salary those days represent.</li>
       <li>Report that share as exempt on your annual return.</li>
     </ol>
   </section>
 
-  <section>
-    <h2>Keep your refund</h2>
+  <section class="band close">
+    <h2>Keep your refund.</h2>
     <p>We're working out the simplest way to do this yourself. Nothing's ready yet. Email us and we'll tell you when it is.</p>
     <a class="cta" href="mailto:hello@dontbeafreier.com?subject=Add%20me%20to%20the%20waitlist">Email us to join the waitlist</a>
+    <p class="legal">This is general information, not tax advice. Whether you qualify, and for how much, depends on your situation and the rules for your year.</p>
   </section>
-
-  <footer>
-    <p>This is general information, not tax advice. Whether you qualify, and for how much, depends on your situation and the rules for your year.</p>
-  </footer>
 </main>
 </body>
 </html>
