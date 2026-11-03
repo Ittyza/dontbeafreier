@@ -12,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%231a2bd8'/%3E%3Cpath transform='rotate(45 100 100)' fill='%23ff5a36' d='M100 4C108 4 112 20 112 40V72L190 118C194 120 196 124 196 128V136L112 112 110 160 134 178V188L100 180 66 188V178L90 160 88 112 4 136V128C4 124 6 120 10 118L88 72V40C88 20 92 4 100 4Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Courier+Prime&family=League+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Courier+Prime&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <style>
   :root {
     --sky: #cfe8f7;
@@ -26,7 +26,7 @@
   body {
     margin: 0;
     color: var(--ink);
-    font: 400 1.2rem/1.5 Assistant, system-ui, sans-serif;
+    font: 400 1.2rem/1.5 "Newsreader", Georgia, serif;
     overflow-x: hidden;
   }
   a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
@@ -45,7 +45,7 @@
     position: relative;
     margin: 0 0 0 -0.02em;
     color: var(--cobalt);
-    font: 400 min(33.5vw, 44svh)/0.86 "League Gothic", Impact, sans-serif;
+    font: 600 min(18vw, 24svh)/0.9 "Fraunces", Georgia, serif;
     text-transform: uppercase;
     letter-spacing: -0.005em;
     white-space: nowrap;
@@ -72,18 +72,18 @@
     display: block;
     margin-bottom: 0.75rem;
     color: var(--cobalt);
-    font: 400 clamp(2.4rem, 5.4vw, 4.75rem)/0.98 "League Gothic", Impact, sans-serif;
+    font: 400 clamp(2.4rem, 5.4vw, 4.75rem)/0.98 "Fraunces", Georgia, serif;
     text-transform: uppercase;
   }
 
   .band { padding: clamp(3rem, 7vw, 6rem) var(--gutter); }
   h2 {
     margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
-    font: 400 clamp(3rem, 8vw, 7rem)/0.92 "League Gothic", Impact, sans-serif;
+    font: 400 clamp(3rem, 8vw, 7rem)/0.92 "Fraunces", Georgia, serif;
     text-transform: uppercase;
   }
   .checks { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 4vw, 4rem); margin: 0; }
-  .checks dt { color: var(--cobalt); font: 400 clamp(2rem, 3.6vw, 3.25rem)/1 "League Gothic", Impact, sans-serif; text-transform: uppercase; }
+  .checks dt { color: var(--cobalt); font: 400 clamp(2rem, 3.6vw, 3.25rem)/1 "Fraunces", Georgia, serif; text-transform: uppercase; }
   .checks dd { margin: 0.5rem 0 0; }
   .note { margin: clamp(1.5rem, 3vw, 2.5rem) 0 0; font: 400 1.05rem/1.4 "Courier Prime", monospace; }
 
@@ -93,11 +93,11 @@
   .steps li::before {
     content: counter(step);
     display: block;
-    font: 400 clamp(5rem, 13vw, 12rem)/0.85 "League Gothic", Impact, sans-serif;
+    font: 400 clamp(5rem, 13vw, 12rem)/0.85 "Fraunces", Georgia, serif;
   }
 
   .close { position: relative; overflow: hidden; background: var(--cobalt); color: #fff; padding-bottom: clamp(2rem, 4vw, 3rem); }
-  .close h2 { font-size: min(calc((100vw - 2 * var(--gutter) - 1rem) / 5.6), 24rem); margin-bottom: 0.15em; margin-left: -0.02em; white-space: nowrap; }
+  .close h2 { font-size: min(calc((100vw - 2 * var(--gutter) - 1rem) / 10), 14rem); margin-bottom: 0.15em; margin-left: -0.02em; white-space: nowrap; }
   .close p { max-width: 38rem; margin: 0; }
   .cta {
     display: inline-block;
