@@ -63,6 +63,9 @@
     pointer-events: none;
   }
   .plane { fill: var(--sun); }
+  /* Own layer, normal blending: inside .sky the multiply blend darkens the
+     yellow against the sky and it reads olive instead of yellow. */
+  .plane-layer { mix-blend-mode: normal; }
   .route { fill: none; stroke: var(--cobalt); stroke-width: 3; stroke-dasharray: 3 11; stroke-linecap: round; vector-effect: non-scaling-stroke; }
   .lede {
     position: relative;
@@ -134,6 +137,8 @@
       <h1><span>Don't be</span><span>a freier.</span></h1>
       <svg class="sky" viewBox="0 0 1600 900" preserveAspectRatio="xMaxYMid meet" aria-hidden="true" focusable="false">
         <path class="route" d="M-2400 900 C -300 900, 500 800, 790 560"/>
+      </svg>
+      <svg class="sky plane-layer" viewBox="0 0 1600 900" preserveAspectRatio="xMaxYMid meet" aria-hidden="true" focusable="false">
         <g class="plane-group">
           <path class="plane" transform="translate(1185 345) rotate(62) scale(5.6) translate(-100 -100)" d="M100 4C108 4 112 20 112 40V72L190 118C194 120 196 124 196 128V136L112 112 110 160 134 178V188L100 180 66 188V178L90 160 88 112 4 136V128C4 124 6 120 10 118L88 72V40C88 20 92 4 100 4Z"/>
         </g>
